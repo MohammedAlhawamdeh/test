@@ -12,7 +12,31 @@ const App = () => {
           {
             client.stackTech.map(st => {
               return (
-                <span>{`${st} `}</span>
+                <>
+                  <span>{`${st} `}</span>
+                  {
+                    client.projects.map(c => {
+                      return (
+                        <>
+                          <p>
+                            {
+                              c.roles.map(r => {
+                                return (
+                                  <>
+                                    {console.log('roles', r)}
+                                  </>
+                                )
+                              })
+                            }
+                          </p>
+                        </>
+                      )
+                    })
+                  }
+
+                </>
+
+
               )
             })
           }
